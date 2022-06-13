@@ -1,0 +1,1 @@
+import{R as e}from"./RouterViewHolder.0d29c585.js";import{j as t,i as r,o}from"./index.a364b306.js";const s={name:"UserSettingsView"},p=Object.assign(s,{setup(a){return(c,n)=>(o(),t(r(e)))}});export{p as default};

@@ -1,0 +1,1 @@
+import{R as e}from"./RouterViewHolder.0d29c585.js";import{j as o,i as r,o as t}from"./index.a364b306.js";const a={name:"TagView"},p=Object.assign(a,{setup(s){return(c,_)=>(t(),o(r(e)))}});export{p as default};

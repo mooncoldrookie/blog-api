@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  pg:
+    image: postgres
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./data/postgresql/data:/var/lib/postgresql/data
+  redis:
+    image: redis
+    restart: always
+    hostname: redis
+    container_name: redis
+    privileged: true
+    ports:
+      - "6380:6379"
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - ./data/redis/data:/data
+      - ./conf/redis.conf:/etc/redis/redis.conf
+      - ./logs:/logs
+    command: ["redis-server","/etc/redis/redis.conf"]

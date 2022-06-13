@@ -1,0 +1,1 @@
+import{R as e}from"./RouterViewHolder.0d29c585.js";import{j as t,i as o,o as r}from"./index.a364b306.js";const s={name:"SystemView"},m=Object.assign(s,{setup(a){return(c,_)=>(r(),t(o(e)))}});export{m as default};

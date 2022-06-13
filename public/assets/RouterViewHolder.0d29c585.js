@@ -1,0 +1,1 @@
+import{_ as n,x as s,o as e,j as o,g as c,ad as _,ae as i}from"./index.a364b306.js";const p={name:"RouterViewHolder"};function l(u,d,m,f,v,x){const t=s("router-view");return e(),o(t,null,{default:c(({Component:r,route:a})=>[(e(),o(_,{exclude:["PostEdit"]},[(e(),o(i(r),{key:a.name}))],1024))]),_:1})}var $=n(p,[["render",l]]);export{$ as R};
