@@ -20,7 +20,7 @@ web项目单独运行，而admin项目将运行在后端地址上
 JWT_SECRET=your jwt secret
 SERVER_PORT=3000
 ```
-- postgresql和redis使用docker构建，你需要实现安装docker和docker-compose，如果你已有postgresql和redis的测试环境，
+- postgresql和redis使用docker构建，你需要事先安装docker和docker-compose，如果你已有postgresql和redis的测试环境，
 修改config目录下的配置文件即可
 - 一切都准备好后，运行package.json中的命令
 ```
