@@ -36,13 +36,28 @@ npm run start
 - 也可以将admin单独分离运行，只需要修改admin项目运行环境的请求地址
 
 ### 注意
+#### 如何创建第一个管理员用户
 虽然admin可以添加用户，但登录页面并没有注册功能，因为后台管理并不需要显式的注册
 
-#### 如何创建第一个管理员用户
 在user模块中有添加用户的接口，你可以手动调用这个接口，以便创建一个管理员用户
 
 或者使用/common/util/index中的encrypt函数创建一个密码，
 然后在数据库的user表中手动插入一条数据
+
+#### 上传文件
+file模块中上传文件后，是直接拼接当前环境地址作为返回前端的url，在服务器部署时，可能要修改为你实际的ip地址
+```javascript
+ uploadFile(@Body() body: any, @UploadedFile() file: Express.Multer.File) {
+    // 更换地址可以将 http://localhost 改为其他地址
+    const path = 'http://localhost:' + process.env.SERVER_PORT + '/upload/' + file.filename
+    return {
+      filename: file.filename,
+      path,
+      size: file.size,
+    }
+  }
+```
+这不是一个聪明的方法，最好是使用一个固定的静态资源服务器
 
 
 
