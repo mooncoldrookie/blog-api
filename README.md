@@ -15,9 +15,11 @@ web项目单独运行，而admin项目将运行在后端地址上
 - 在项目内新建public文件夹
 - 将admin项目打包构建后，把打包后dist目录内的文件拷贝到此项目的public文件夹内
 - public目录是后端的静态资源目录，上传的图片也在此目录下的upload文件夹内
-- 还需要创建在根目录创建.env文件并添加两条环境变量
->   JWT_SECRET=your jwt secret
-    SERVER_PORT=3000
+- 还需要创建在根目录创建.env文件并添加两条环境变量 
+```
+JWT_SECRET=your jwt secret
+SERVER_PORT=3000
+```
 - postgresql和redis使用docker构建，你需要实现安装docker和docker-compose，如果你已有postgresql和redis的测试环境，
 修改config目录下的配置文件即可
 - 一切都准备好后，运行package.json中的命令
