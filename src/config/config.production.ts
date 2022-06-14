@@ -12,8 +12,8 @@ export default {
     username: 'postgres',
     password: 'postgres',
     name: 'postgres',
+    autoLoadEntities: true,
     // 自动加载模块
-    autoLoadEntities: false,
     synchronize: false,
   },
   redis: {
